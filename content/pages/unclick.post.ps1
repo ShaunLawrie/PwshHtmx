@@ -4,6 +4,20 @@ if($null -eq $global:UnclickCount) {
     $global:UnclickCount++
 }
 
+if($global:UnclickCount -gt 10) {
+    return @"
+<div id="billy">
+    <p>
+        The current time is $(Get-Date)
+    </p>
+    Ok fine.
+    <p>
+        You've tried to hide bill gates $($global:UnclickCount) times.
+    </p>
+</div>
+"@
+}
+
 return @"
 <div id="billy">
     <p>
