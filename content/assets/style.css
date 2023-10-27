@@ -1,0 +1,31 @@
+html {
+    max-width: 100%;
+    background: #edf5f9;
+}
+
+body {
+    margin: 1rem 2rem 1rem 2rem;
+    font-family: sans-serif;
+}
+
+table {
+    background: #afc6d1;
+    border-collapse: collapse;
+    border-spacing: 0;
+    border: solid 1px #ccc;
+    width: 100%;
+}
+
+td, th {
+    text-align: left;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    border: solid 1px #ffffff;
+}
+
+th {
+    background: #7d97a3;
+}
+
+img {
+    width: 100%;
+}
