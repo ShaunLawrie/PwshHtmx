@@ -1,3 +1,4 @@
+# This is a super insecure web server that is only meant for tinkering purposes.
 function Start-Server {
     param (
         [Parameter(Mandatory)]
