@@ -25,6 +25,7 @@ function Install-WebView2 {
     Remove-Item "$installLocation\*" -Recurse -Force
 
     Write-Host "Downloading Microsoft.Web.WebView2 version $Version"
+    $ProgressPreference = 'SilentlyContinue'
     New-Item -Path $libPath -ItemType "Directory" -Force | Out-Null
     $downloadLocation = Join-Path $libPath "download.zip"
     Invoke-WebRequest "https://www.nuget.org/api/v2/package/Microsoft.Web.WebView2/$Version" -OutFile $downloadLocation -UseBasicParsing
