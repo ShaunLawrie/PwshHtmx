@@ -1,3 +1,5 @@
+#Requires -Version 7.0
+
 Import-Module "$PSScriptRoot\modules\WebView2.psm1" -Force
 Import-Module "$PSScriptRoot\modules\Server.psm1" -Force
 

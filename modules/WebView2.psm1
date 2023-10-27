@@ -46,7 +46,8 @@ function Start-WebView2 {
 
     if($null -eq $IsWindows -or -not $IsWindows) {
         Write-Warning "WebView2 is only supported on Windows, opening default browser instead"
-        Start-Process $Url -Wait
+        Write-Host "Visit $Url in your browser"
+        Read-Host "Press enter to shut down the server and continue"
     }
     
     Add-Type -AssemblyName PresentationFramework
