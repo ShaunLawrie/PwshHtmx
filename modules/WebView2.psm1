@@ -32,7 +32,10 @@ function Install-WebView2 {
     Expand-Archive $downloadLocation $libPath -Force
     Remove-Item $downloadLocation
 
-    Copy-Item -Path (Join-Path $libPath "runtimes\win-x64\native\WebView2Loader.dll") -Destination $LoaderLocation -Force
+    # Runtime needs to be in the same location as the 
+    Copy-Item `
+        -Path (Join-Path $libPath "runtimes\win-x64\native\WebView2Loader.dll") `
+        -Destination (Join-Path $libPath "lib\netcoreapp3.0\") -Force
 }
 
 function Start-WebView2 {
